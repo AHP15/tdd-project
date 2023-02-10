@@ -34,4 +34,14 @@ describe Solver do
       expect(@solver.fizzbuzz(7)).to eq('7')
     end
   end
+
+  context 'Reverse method' do
+    it 'Should reverse a string' do
+      expect(@solver.reverse('hello')).to eq('olleh')
+    end
+
+        it 'Should reverse a string' do
+      expect(@solver.reverse('world')).to eq('dlrow')
+    end
+  end
 end
