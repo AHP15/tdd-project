@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../solver'
 
 describe Solver do
@@ -42,7 +44,7 @@ describe Solver do
       expect(@solver.reverse('hello')).to eq('olleh')
     end
 
-        it 'Should reverse a string' do
+    it 'Should reverse a string' do
       expect(@solver.reverse('world')).to eq('dlrow')
     end
   end

@@ -1,33 +1,29 @@
+# frozen_string_literal: true
+
 class Solver
-    def factorial(num)
-        if num < 0 
-            raise TypeError
-        elsif num == 0
-          return 1
-        else
-          return num * factorial(num - 1)
-        end
+  def factorial(num)
+    if num.negative?
+      raise TypeError
+    elsif num.zero?
+      1
+    else
+      num * factorial(num - 1)
     end
+  end
 
-    def reverse(str)
-        return str.reverse
-    end
+  def reverse(str)
+    str.reverse
+  end
 
-    def fizzbuzz(number)
-      result = ''
+  def fizzbuzz(number)
+    result = ''
 
-      if number % 3 == 0
-        result += 'fizz'
-      end
+    result += 'fizz' if (number % 3).zero?
 
-      if number % 5 == 0
-        result += 'buzz'
-      end
+    result += 'buzz' if (number % 5).zero?
 
-      if result == ''
-        result += "#{number}"
-      end
+    result += number.to_s if result == ''
 
-      result
-    end
+    result
+  end
 end
