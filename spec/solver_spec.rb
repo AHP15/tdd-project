@@ -1,3 +1,5 @@
+require_relative '../solver'
+
 describe Solver do
   before :all do
     @solver = Solver.new
